@@ -3,12 +3,20 @@ defmodule MyShopApiWeb.Shop do
     %{
       id: 1,
       name: "Blacky's Shop",
-      category: :clothing
+      category: :clothing,
+      address: %{
+        country: "Blessings INc",
+        city: "HopeAlice co"
+      }
     },
     %{
       id: 2,
       name: "Tarzan's Collection",
-      category: :hardware
+      category: :hardware,
+      address: %{
+        country: "Ukrainasuim",
+        city: "BigOlCIty"
+      }
     }
   ]
 

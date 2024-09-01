@@ -7,7 +7,7 @@ defmodule MyShopApiWeb.Schema.Mutations.Shop do
       arg :name, :string
       arg :category, :shop_category
 
-      resolve &MyShopApiWeb.Resolver.Shop.update/2
+      resolve &MyShopApiWeb.Resolvers.Shop.update/2
     end
   end
 end

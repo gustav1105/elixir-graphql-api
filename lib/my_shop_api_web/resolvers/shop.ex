@@ -1,4 +1,4 @@
-defmodule MyShopApiWeb.Resolver.Shop do
+defmodule MyShopApiWeb.Resolvers.Shop do
   
   alias MyShopApiWeb.Shop
 

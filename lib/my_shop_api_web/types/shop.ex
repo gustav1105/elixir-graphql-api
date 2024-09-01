@@ -6,11 +6,19 @@ defmodule MyShopApiWeb.Types.Shop do
     value :hardware
     value :clothing
   end
-
+  
+  object :shop_address do
+    description "Where is it on a map"
+    field :country, :string
+    field :city, :string
+  end
+  
   object :shop do
     description "Shops sorted in categories"
-    field :id, non_null(:id)
-    field :name, non_null(:string)
-    field :category, non_null(:shop_category)
+    field :id, :id
+    field :name, :string
+    field :category, :shop_category
+
+    field :address, :shop_address
   end
 end
