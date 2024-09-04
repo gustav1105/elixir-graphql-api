@@ -42,6 +42,8 @@ defmodule MyShopApi.MixProject do
       {:ecto_sql, "~> 3.0"},
       {:absinthe, "~> 1.7"},
       {:absinthe_plug, "~> 1.5"},
+      {:postgrex, "~> 0.19"},
+      {:dataloader, "~>1.0"}
     ]
   end
 

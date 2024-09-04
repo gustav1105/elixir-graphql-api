@@ -12,4 +12,15 @@ defmodule MyShopApiWeb.Schema do
   mutation do
     import_fields :shop_mutations
   end
+
+  def context(ctx) do
+    source = Dataloader.Ecto.new(MyShopApi.Repo)
+    dataloader = Dataloader.add_source(Dataloader.new(), MyShopApi.Retail, source) 
+
+    Map.put(ctx, :loader, dataloader)
+  end
+
+  def plugins do
+    [Absinthe.Middleware.Dataloader] ++ Absinthe.Plugin.defaults()
+  end
 end

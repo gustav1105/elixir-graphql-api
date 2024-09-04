@@ -9,5 +9,13 @@ defmodule MyShopApiWeb.Schema.Mutations.Shop do
 
       resolve &MyShopApiWeb.Resolvers.Shop.update/2
     end
+
+    field :create_shop, :shop do
+      arg :name, non_null(:string)
+      arg :category, non_null(:shop_category)
+      arg :address, non_null(:shop_address_input)
+
+      resolve &MyShopApiWeb.Resolvers.Shop.create/2
+    end
   end
 end

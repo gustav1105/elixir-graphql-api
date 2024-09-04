@@ -7,6 +7,12 @@
 # General application configuration
 import Config
 
+config :my_shop_api, MyShopApi.Repo,
+  database: "my_shop_api_repo",
+  username: "postgres",
+  password: "gustav7393",
+  hostname: "localhost"
+
 config :my_shop_api,
   generators: [timestamp_type: :utc_datetime]
 
@@ -28,6 +34,9 @@ config :logger, :console,
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
+
+config :my_shop_api,
+      ecto_repos: [MyShopApi.Repo]
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

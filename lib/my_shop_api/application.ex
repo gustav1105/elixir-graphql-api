@@ -14,7 +14,8 @@ defmodule MyShopApi.Application do
       # Start a worker by calling: MyShopApi.Worker.start_link(arg)
       # {MyShopApi.Worker, arg},
       # Start to serve requests, typically the last entry
-      MyShopApiWeb.Endpoint
+      MyShopApiWeb.Endpoint,
+      MyShopApi.Repo
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

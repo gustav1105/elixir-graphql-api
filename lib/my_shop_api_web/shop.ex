@@ -5,7 +5,7 @@ defmodule MyShopApiWeb.Shop do
       name: "Blacky's Shop",
       category: :clothing,
       address: %{
-        country: "Blessings INc",
+        country: "Blessings Inc",
         city: "HopeAlice co"
       }
     },
